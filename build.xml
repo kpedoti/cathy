@@ -1,0 +1,14 @@
+  <project name="first project" basedir="." default="tarfile">
+  
+	<target name="copytarfiles>"
+          <copy todir="bin">  
+           <fileset dir="bin">
+             </fileset>		
+        </copy>
+</target>
+			 
+   <target name="tarfile" depends= "copytarfiles">
+   <mkdir dir="lib"/>
+   <tar destfile="lib/file.tar" basedir="bin"/>
+   </target>
+</project>
